@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -51,15 +52,19 @@ position : relative;
 padding: 30px;
 margin: 0;
 }
- 
+
+body,html{
+ height:100%;
+}
 
 body {
-background: url("bridge.png");
+background: url("ak.jpg");
 background-size: cover;
 background-position : center;
 background-color : white;
 padding: 50px;
 margin: 0px;
+
 }
 
 
@@ -67,12 +72,12 @@ margin: 0px;
 width: 30%;
 position: absolute;
 height: 40%;
-background-color: purple;
+background-color: rgb(46, 224, 135);
 margin:2px;
 font-size: 20px;
 border-radius: 40px;
 top: 50%; 
-left:50%;
+left:25%;
 transform: translate(-50% , -50%);
 padding: 20px;
 text-align: center;
@@ -91,7 +96,7 @@ padding: 5px;
     <div class="main">
        <div class="box">
        
-                        <h1 style="background-color:purple; text-align: center;">Account Login</h1><br>
+                        <h1 style="background-color: rgb(46, 224, 135); text-align: center;">Account Login</h1><br>
                         <form method="POST" class="register-form" name="myform" id="login-form" onsubmit="return validateform()">
 
                             <div class="inputBox">
@@ -109,7 +114,7 @@ padding: 5px;
                                 <label for="remember-me" class="label-agree-term"><span><span></span></span>Remember me</label><br>
                             </div>
                             <div class="form-group form-button"><br>      
-                                <input style="background-color:#ff6347;" type="submit" name="submit" id="signin" class="form-submit" value="Login"/>
+                                <input style="background-color:#04d283;" type="submit" name="submit" id="signin" class="form-submit" value="Login"/>
                             </div>
                         </form>
                          
