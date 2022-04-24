@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GrocerEase</title>
+    <script>
+    function validateform(){
+    var name=document.myform.name.value;
+    var passw=document.myform.password.value;
+
+    var pss=(/^[A-Za-z1-9]{7,15}$/);
+
+    if (name==null || name==""){
+      alert("Enter valid name!!!");
+      return false;
+    }
+
+    else if(passw.length<6 ){
+      alert("Password must contain 7 to 15 characters which should only include characters, numeric digits, underscore and first character must be a letter");
+      return false;
+
+      }
+      else if(pss.test(passw))
+      {
+        alert("Password must contain 7 to 15 characters which should only include characters, numeric digits, underscore and first character must be a letter");
+        return false;
+      }
+
+
+    }
+    </script>
+     
+</head>
+<body>
+ 
+
+<style>
+
+* {
+padding: 30;
+margin: 40;
+box-sizing: border-box;
+}
+
+.main {
+width: 100%;
+height: 100vh;
+position : relative;
+padding: 30px;
+margin: 0;
+}
+ 
+
+body {
+background: url("bridge.png");
+background-size: cover;
+background-position : center;
+background-color : white;
+padding: 50px;
+margin: 0px;
+}
+
+
+.box {
+width: 30%;
+position: absolute;
+height: 40%;
+background-color: purple;
+margin:2px;
+font-size: 20px;
+border-radius: 40px;
+top: 50%; 
+left:50%;
+transform: translate(-50% , -50%);
+padding: 20px;
+text-align: center;
+}
+
+
+.box input{
+font-size:20px;
+padding: 5px; 
+}
+
+</style>
+    
+
+
+    <div class="main">
+       <div class="box">
+       
+                        <h1 style="background-color:purple; text-align: center;">Account Login</h1><br>
+                        <form method="POST" class="register-form" name="myform" id="login-form" onsubmit="return validateform()">
+
+                            <div class="inputBox">
+                                <label for="Name"> </label>
+                                <input type="text" name="name" id="Name" placeholder="USER_ID"/>
+                            </div> <br>
+
+                            <div class="inputBox"">
+                                <label for="Password"> </label>
+                                <input type="password" name="password" id="Password" placeholder="PASSWORD"/>
+                            </div>
+                            <br>
+                            <div class="inputBox">
+                                <input type="checkbox" name="terms" id="remember-me" class="agree-term" />
+                                <label for="remember-me" class="label-agree-term"><span><span></span></span>Remember me</label><br>
+                            </div>
+                            <div class="form-group form-button"><br>      
+                                <input style="background-color:#ff6347;" type="submit" name="submit" id="signin" class="form-submit" value="Login"/>
+                            </div>
+                        </form>
+                         
+                    </div>
+                </div>
+
+</body>
+</html>
